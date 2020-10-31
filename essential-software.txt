@@ -1,0 +1,9 @@
+Google Chrome
+  - Setup VPN
+  - loom
+  - lastpass
+  - Wappalyzer
+Visual Code Studio
+Skype
+Flameshot - screenshot
+Pick - color picker
