@@ -3,7 +3,10 @@ Google Chrome
   - loom
   - lastpass
   - Wappalyzer
+  - Grammarly
 Visual Code Studio
+Atom
 Skype
 Flameshot - screenshot
 Pick - color picker
+NodeJS, NPM, nodemon

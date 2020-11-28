@@ -46,25 +46,34 @@ $ rm -rf ~/snap/skype/common/.config/google-chrome
 $ sudo ln -s ~/.config/google-chrome ~/snap/skype/common/.config/
 
 
-# Hide username and hostname from terminal and show git branch
-
-$ gedit ~/.bashrc
-
-> Modify this area
-parse_git_branch() {
- git branch 2> /dev/null | sed -e '/^[^*]/d' -e 's/* \(.*\)/(\1)/'
-}
-
-if [ "$color_prompt" = yes ]; then
-    PS1='${debian_chroot:+($debian_chroot)}\[\033[01;34m\]\w \[\033[01;31m\]$(parse_git_branch)\[\033[00m\]\$ '
-else
-    PS1='${debian_chroot:+($debian_chroot)}\w $(parse_git_branch)\$ '
-fi
-unset color_prompt force_color_prompt
-
 
 # Create Shortcut in Desktop
 $ ln -s $PWD ~/Desktop/
+
+
+# Generate SSL in localhost
+
+> Installation
+$ sudo apt install libnss3-tools -y
+$ wget https://github.com/FiloSottile/mkcert/releases/download/v1.1.2/mkcert-v1.1.2-linux-amd64
+$ mv mkcert-v1.1.2-linux-amd64 mkcert
+$ chmod +x mkcert
+$ sudo cp mkcert /usr/local/bin/
+
+> Generate Local CA
+$ mkcert -install
+
+> Generate Local SSL Certificates
+$ mkcert localhost 127.0.0.1 ::1
+
+> DNS clean
+$ sudo /etc/init.d/dns-clean start
+
+# Chnage default sort type to 'type'
+$ gsettings set org.gnome.nautilus.preferences default-sort-order 'type'
+
+# Clear memory
+$ sudo sh -c 'echo 3 > /proc/sys/vm/drop_caches'
 
 
 
