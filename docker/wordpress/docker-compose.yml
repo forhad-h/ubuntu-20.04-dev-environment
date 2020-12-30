@@ -1,0 +1,51 @@
+version: '3.7'
+
+services:
+  db_wp_dev:
+    image: mysql:latest
+    container_name: cont_wp_dev_db
+    restart: always
+    volumes:
+      - ./data/db:/var/lib/mysql
+    environment:
+      MYSQL_ROOT_PASSWORD: 11111111
+      MYSQL_DATABASE: wp_dev_db
+      MYSQL_USER: user_wp_dev
+      MYSQL_PASSWORD: 111111
+    networks:
+      - net_wp_dev
+
+  wp_wp_dev:
+    image: wordpress:latest
+    container_name: cont_wp_dev_wp
+    restart: always
+    volumes:
+      - ./html:/var/www/html
+    depends_on:
+      - db_wp_dev
+    environment:
+      WORDPRESS_DB_HOST: db_wp_dev
+      WORDPRESS_DB_NAME: wp_dev_db
+      WORDPRESS_DB_USER: user_wp_dev
+      WORDPRESS_DB_PASSWORD: 111111
+    ports:
+      - 8000:80
+    networks:
+      - net_wp_dev
+
+  pma_wp_dev:
+    image: phpmyadmin/phpmyadmin
+    container_name: cont_wp_dev_pma
+    restart: always
+    ports:
+      - 8001:80
+    depends_on:
+      - db_wp_dev
+    environment:
+      PMA_HOST: db_wp_dev
+      MYSQL_ROOT_PASSWORD: 11111111
+    networks:
+      - net_wp_dev
+networks:
+  net_wp_dev:
+    name: net_wp_dev
