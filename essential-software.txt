@@ -5,8 +5,14 @@ Google Chrome
   - Wappalyzer
   - Grammarly
 Visual Code Studio
+  - Code Spell Checker
+  - ENV
+  - ESLint
+  - Prettier - Code formatter
+  - TODO Highlight
 Atom
 Skype
 Flameshot - screenshot
 Pick - color picker
+Terminator
 NodeJS, NPM, nodemon

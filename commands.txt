@@ -47,7 +47,7 @@ $ sudo ln -s ~/.config/google-chrome ~/snap/skype/common/.config/
 
 
 
-# Create Shortcut in Desktop
+# Create Bookmark/Shortcut in Desktop
 $ ln -s $PWD ~/Desktop/
 
 
