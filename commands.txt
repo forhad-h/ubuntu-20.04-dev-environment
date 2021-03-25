@@ -16,21 +16,14 @@ $ gsettings set org.gnome.shell.extensions.desktop-icons show-home false
 # Show user folder from Desktop
 
 $ gsettings set org.gnome.shell.extensions.desktop-icons show-home true
-
-
-# Add 'Open in Terminator' in nautilus context menu
-
-$ sudo apt install filemanager-actions
-$ sudo apt install nautilus-actions
-
-> Filemanager-Actions GUI
- -> Path: /usr/bin/terminator
- -> Parameters: --working-directory=%d/%b
  
  
 # Open Terminator in Desktop context menu
 
-gsettings set com.gnome.desktop.default-applications.terminal exec /usr/bin/terminator
+gsettings set org.gnome.desktop.default-applications.terminal exec /usr/bin/terminator
+
+# Open Terminal in Desktop context menu
+gsettings set org.gnome.desktop.default-applications.terminal exec gnome-terminal
 
 
 # Turn off 'Hotspot Login' window

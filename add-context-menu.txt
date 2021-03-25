@@ -1,0 +1,9 @@
+# Add 'Open in Terminator' in nautilus context menu
+
+$ sudo apt install filemanager-actions
+$ sudo apt install nautilus-actions
+
+> Filemanager-Actions GUI
+ -> Path: /usr/bin/terminator
+ -> Parameters: --working-directory=%d/%b
+ -> Preferences -> Runtime preferences -> Nautilus menu layout -> Disable ( Create a root 'FileManager-Actions' menu )
