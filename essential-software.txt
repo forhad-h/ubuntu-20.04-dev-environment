@@ -10,9 +10,21 @@ Visual Code Studio
   - ESLint
   - Prettier - Code formatter
   - TODO Highlight
+  - GraphQL for VSCode
+  - File icons
 Atom
+  - Linter
+  - Atom Beautify
+  - Minimap
+  - Emmet
+  - File Icons
+  - highlight-line
+  - autocomplete-wordpress-hooks
+  - wordpress-api
 Skype
 Flameshot - screenshot
 Pick - color picker
 Terminator
-NodeJS, NPM, nodemon
+NodeJS, NPM, nodemon, yarn
+Docker
+
