@@ -27,4 +27,5 @@ Pick - color picker
 Terminator
 NodeJS, NPM, nodemon, yarn
 Docker
+Postman
 
