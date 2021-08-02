@@ -15,4 +15,6 @@ Skype
 Flameshot - screenshot
 Pick - color picker
 Terminator
-NodeJS, NPM, nodemon
+NodeJS, NPM, nodemon, yarn
+Docker
+
