@@ -1,0 +1,11 @@
+# '/wp-dev' would be the project folder name
+
+# to create wp-config.php and install plugin from admin.
+sudo chown -R root:www-data /var/www/html/wp-dev &&\
+sudo  find /var/www/html/wp-dev -type d -exec chmod 755 {} \; && \
+sudo  find /var/www/html/wp-dev -type f -exec chmod 644 {} \; && \
+sudo  chown -Rf www-data.www-data /var/www/html/wp-dev
+
+# to override .htaccess settings
+sudo a2enmod rewrite
+sudo service apache2 restart
