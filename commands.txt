@@ -68,10 +68,10 @@ $ gsettings set org.gnome.nautilus.preferences default-sort-order 'type'
 # Clear memory
 $ sudo sh -c 'echo 3 > /proc/sys/vm/drop_caches'
 
-# to enable built-in keyboard
+# to disable built-in keyboard
 xinput set-int-prop 14 "Device Enabled" 8 0
 
-# to disable built-in keyboard
+# to enable built-in keyboard
 xinput set-int-prop 14 "Device Enabled" 8 1
 
 
