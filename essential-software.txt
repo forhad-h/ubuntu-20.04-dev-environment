@@ -26,5 +26,11 @@ Flameshot - screenshot
 Pick - color picker
 Terminator
 NodeJS, NPM, nodemon, yarn
+
+# NodeJS - Installation process
+
+curl -fsSL https://deb.nodesource.com/setup_lts.x | sudo -E bash -
+sudo apt-get install -y nodejs
+
 Docker
 Postman
