@@ -23,7 +23,8 @@ Atom
   - sublime-block-comment
 Skype
 Flameshot - screenshot
-Pick - color picker
+Pick - color picker (pick-colour-picker)
+Anydesk
 Terminator
 NodeJS, NPM, nodemon, yarn
 
@@ -34,3 +35,4 @@ sudo apt-get install -y nodejs
 
 Docker
 Postman
+

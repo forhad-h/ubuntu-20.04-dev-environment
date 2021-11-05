@@ -62,7 +62,7 @@ $ mkcert localhost 127.0.0.1 ::1
 > DNS clean
 $ sudo /etc/init.d/dns-clean start
 
-# Chnage default sort type to 'type'
+# Change default sort type to 'type'
 $ gsettings set org.gnome.nautilus.preferences default-sort-order 'type'
 
 # Clear memory
