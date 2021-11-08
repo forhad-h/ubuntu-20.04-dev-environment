@@ -4,7 +4,7 @@ Google Chrome
   - lastpass
   - Wappalyzer
   - Grammarly
-Visual Code Studio
+Visual Code Studio - for JS development
   - Code Spell Checker
   - ENV
   - ESLint
@@ -12,8 +12,9 @@ Visual Code Studio
   - TODO Highlight
   - GraphQL for VSCode
   - File icons
-Atom
+Atom - for PHP development
   - Linter
+  - linter-php
   - Atom Beautify
   - Minimap
   - Emmet
@@ -21,6 +22,18 @@ Atom
   - autocomplete-wordpress-hooks
   - wordpress-api
   - sublime-block-comment
+  - ide-php
+  - php-debug
+    - atom-debug-ui
+    - atom-ide-ui
+  - highlight-selected
+    - Settings -> Light Theme
+  - jquery-snippets
+  - ide-html
+  - git-plus
+  - language-dotenv
+  - language-gitignore
+  
 Skype
 Flameshot - screenshot
 Pick - color picker (pick-colour-picker)
