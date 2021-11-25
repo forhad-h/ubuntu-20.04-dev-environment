@@ -4,6 +4,7 @@ Google Chrome
   - lastpass
   - Wappalyzer
   - Grammarly
+  
 Visual Code Studio - for JS development
   - Code Spell Checker
   - ENV
@@ -14,6 +15,11 @@ Visual Code Studio - for JS development
   - File icons
   - Docker
   - Remote - Containers
+
+  # Fix Keyboard Shortcut:
+    - Change Keybinding of "Add Selection To Next Find Match" `Ctrl + D` to `Ctrl + Alt + N`
+    - Then change Keybinding of "Copy Line Down" to `Ctrl + D`
+    
 Atom - for PHP development
   - Linter
   - linter-php
@@ -45,9 +51,10 @@ NodeJS, NPM, nodemon, yarn
 
 # NodeJS - Installation process
 
-curl -fsSL https://deb.nodesource.com/setup_lts.x | sudo -E bash -
-sudo apt-get install -y nodejs
+$ curl -fsSL https://deb.nodesource.com/setup_lts.x | sudo -E bash -
+$ sudo apt-get install -y nodejs
 
 Docker
 Postman
+DBeaver
 
