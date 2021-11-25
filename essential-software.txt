@@ -12,6 +12,8 @@ Visual Code Studio - for JS development
   - TODO Highlight
   - GraphQL for VSCode
   - File icons
+  - Docker
+  - Remote - Containers
 Atom - for PHP development
   - Linter
   - linter-php
