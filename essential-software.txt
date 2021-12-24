@@ -4,16 +4,25 @@ Google Chrome
   - lastpass
   - Wappalyzer
   - Grammarly
-Visual Code Studio
+  
+Visual Code Studio - for JS development
   - Code Spell Checker
   - ENV
   - ESLint
   - Prettier - Code formatter
   - TODO Highlight
-  - GraphQL for VSCode
+  - GraphQL
   - File icons
-Atom
+  - Docker
+  - Remote - Containers
+
+  # Fix Keyboard Shortcut:
+    - Change Keybinding of "Add Selection To Next Find Match" `Ctrl + D` to `Ctrl + Alt + N`
+    - Then change Keybinding of "Copy Line Down" to `Ctrl + D`
+    
+Atom - for PHP development
   - Linter
+  - linter-php
   - Atom Beautify
   - Minimap
   - Emmet
@@ -21,11 +30,32 @@ Atom
   - autocomplete-wordpress-hooks
   - wordpress-api
   - sublime-block-comment
+  - ide-php
+  - php-debug
+    - atom-debug-ui
+    - atom-ide-ui
+  - highlight-selected
+    - Settings -> Light Theme
+  - jquery-snippets
+  - ide-html
+  - git-plus
+  - language-dotenv
+  - language-gitignore
   
 Skype
 Flameshot - screenshot
-Pick - color picker
+Pick - color picker (pick-colour-picker)
+Anydesk
 Terminator
 NodeJS, NPM, nodemon, yarn
+
+# NodeJS - Installation process
+
+$ curl -fsSL https://deb.nodesource.com/setup_lts.x | sudo -E bash -
+$ sudo apt-get install -y nodejs
+
 Docker
 Postman
+DBeaver
+Opera
+

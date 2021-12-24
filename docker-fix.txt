@@ -1,0 +1,11 @@
+If the WordPress is installed with Docker in a different port except 80, then wp-curl does not work in default.
+Here is a solution found in - https://stackoverflow.com/questions/43743894/local-wordpress-env-with-docker-compose-curl-error-7-failed-to-connect-to-loc
+
+/etc/apache2/ports.conf
+Listen 80
+Listen 8080
+
+/etc/apache2/sites-available/000-default.conf
+<VirtualHost *:*>
+
+
