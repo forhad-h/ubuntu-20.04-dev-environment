@@ -10,11 +10,15 @@ Visual Code Studio - for JS development
   - ENV
   - ESLint
   - Prettier - Code formatter
+    - Keyboard Shortcuts -> format document
+    - file -> preference -> settings -> Default Formatter - Set to Prettier
+    - file -> preference -> settings -> Prettier:Semi - Uncheck
   - TODO Highlight
   - GraphQL
   - File icons
   - Docker
   - Remote - Containers
+  - Material Icon Theme
 
   # Fix Keyboard Shortcut:
     - Change Keybinding of "Add Selection To Next Find Match" `Ctrl + D` to `Ctrl + Alt + N`
@@ -41,6 +45,7 @@ Atom - for PHP development
   - git-plus
   - language-dotenv
   - language-gitignore
+
   
 Skype
 Flameshot - screenshot
