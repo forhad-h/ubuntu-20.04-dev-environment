@@ -9,3 +9,10 @@ sudo  chown -Rf www-data.www-data /var/www/html/wp-dev
 # to override .htaccess settings
 sudo a2enmod rewrite
 sudo service apache2 restart
+
+# Increase upload size
+php_value upload_max_filesize 1024M
+php_value post_max_size 1024M
+php_value max_execution_time 300
+php_value max_input_time 300
+
