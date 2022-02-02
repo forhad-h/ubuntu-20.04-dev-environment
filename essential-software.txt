@@ -13,6 +13,8 @@ Visual Code Studio - for JS development
     - Keyboard Shortcuts -> format document
     - file -> preference -> settings -> Default Formatter - Set to Prettier
     - file -> preference -> settings -> Prettier:Semi - Uncheck
+    - file -> preference -> settings -> Search for `Word Wrap` and make `on`
+    - file -> preference -> settings -> Search for 'Tab' and make `2`
   - TODO Highlight
   - GraphQL
   - File icons
