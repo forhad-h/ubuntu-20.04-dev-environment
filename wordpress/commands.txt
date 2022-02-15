@@ -7,8 +7,14 @@ sudo  find /var/www/html/wp-dev -type f -exec chmod 644 {} \; && \
 sudo  chown -Rf www-data.www-data /var/www/html/wp-dev
 
 # to override .htaccess settings
-sudo a2enmod rewrite
-sudo service apache2 restart
+
+$ sudo gedit /etc/apache2/apache2.conf
+
+Find this: <Directory /var/www/>
+Change AllowOverride None to AllowOverride All
+
+$ sudo a2enmod rewrite
+$ sudo service apache2 restart
 
 # Increase upload size
 php_value upload_max_filesize 1024M
