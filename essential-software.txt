@@ -15,7 +15,7 @@ Visual Code Studio - for JS development
     - file -> preference -> settings -> Prettier:Semi - Uncheck
     - file -> preference -> settings -> Search for `Word Wrap` and make `on`
     - file -> preference -> settings -> Search for 'Tab' and make `2`
-  - TODO Highlight
+  - Better Comments
   - GraphQL
   - File icons
   - Docker

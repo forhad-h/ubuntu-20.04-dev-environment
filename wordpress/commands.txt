@@ -22,3 +22,9 @@ php_value post_max_size 1024M
 php_value max_execution_time 300
 php_value max_input_time 300
 
+
+sudo chown -R root:www-data /var/www/html/grasped &&\
+sudo  find /var/www/html/grasped -type d -exec chmod 755 {} \; && \
+sudo  find /var/www/html/grasped -type f -exec chmod 644 {} \; && \
+sudo  chown -Rf www-data.www-data /var/www/html/grasped
+
