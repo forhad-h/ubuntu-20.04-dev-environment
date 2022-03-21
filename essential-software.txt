@@ -49,8 +49,8 @@ Atom - for PHP development
   - language-gitignore
   - PHP Intelephense
 
-    To recognise WordPress functions (Go to Settings (Code > Preferences > Settings), click on the “Workspace” tab, and search for intelephense.environment.includePaths
-In the “Include Paths” section, add an entry for the fresh WordPress installation so Intelephense will index it)
+    > To recognise WordPress functions -Go to Settings > search for intelephense.environment.includePaths
+    > In the “Include Paths” section, add an entry for WordPress installation e.g /var/www/html
 
   - PHP DocBlocker
   - PHP Debug
