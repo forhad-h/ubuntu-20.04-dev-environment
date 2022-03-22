@@ -15,7 +15,7 @@ Visual Code Studio - for JS development
     - file -> preference -> settings -> Prettier:Semi - Uncheck
     - file -> preference -> settings -> Search for `Word Wrap` and make `on`
     - file -> preference -> settings -> Search for 'Tab' and make `2`
-  - TODO Highlight
+  - Better Comments
   - GraphQL
   - File icons
   - Docker
@@ -47,6 +47,15 @@ Atom - for PHP development
   - git-plus
   - language-dotenv
   - language-gitignore
+  - PHP Intelephense
+
+    > To recognise WordPress functions -Go to Settings > search for intelephense.environment.includePaths
+    > In the “Include Paths” section, add an entry for WordPress installation e.g /var/www/html
+
+  - PHP DocBlocker
+  - PHP Debug
+  - WordPress Hooks IntelliSense
+  - WordPress Snippet
 
   
 Skype
