@@ -21,10 +21,19 @@ Visual Code Studio - for JS development
   - Docker
   - Remote - Containers
   - Material Icon Theme
+  - PHP Intelephense
+
+    > To recognise WordPress functions -Go to Settings > search for intelephense.environment.includePaths
+    > In the “Include Paths” section, add an entry for WordPress installation e.g /var/www/html
+
+  - PHP DocBlocker
+  - PHP Debug
+  - WordPress Hooks IntelliSense
+  - WordPress Snippet
 
   # Fix Keyboard Shortcut:
     - Change Keybinding of "Add Selection To Next Find Match" `Ctrl + D` to `Ctrl + Alt + N`
-    - Then change Keybinding of "Copy Line Down" to `Ctrl + D`
+    - Then change Keybinding of "Copy Line Down" to `Ctrl + D`    
     
 Atom - for PHP development
   - Linter
@@ -47,15 +56,6 @@ Atom - for PHP development
   - git-plus
   - language-dotenv
   - language-gitignore
-  - PHP Intelephense
-
-    > To recognise WordPress functions -Go to Settings > search for intelephense.environment.includePaths
-    > In the “Include Paths” section, add an entry for WordPress installation e.g /var/www/html
-
-  - PHP DocBlocker
-  - PHP Debug
-  - WordPress Hooks IntelliSense
-  - WordPress Snippet
 
   
 Skype
