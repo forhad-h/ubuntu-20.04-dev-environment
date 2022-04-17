@@ -1,2 +1,18 @@
 # SSH Key Generation
 ssh-keygen -t ed25519 -C "hosainf1@gmail.com"
+
+# Create config file inside .ssh
+
+# Default github account: oanhnn
+Host github.com
+   HostName github.com
+   IdentityFile ~/.ssh/ed25519_forhad_h
+   IdentitiesOnly yes
+   
+# Other github account: superman
+#Host github-superman
+#   HostName github.com
+#   IdentityFile ~/.ssh/superman_private_key
+#   IdentitiesOnly yes
+
+
