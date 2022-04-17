@@ -1,0 +1,19 @@
+Add
+
+Include /etc/phpmyadmin/apache.conf
+
+To
+
+/etc/apache2/apache2.conf
+
+
+Add
+
+// uncomment first entry
+$cfg['Servers'][$i]['AllowNoPassword'] = TRUE;
+
+To
+
+/etc/phpmyadmin/config.inc.php
+
+

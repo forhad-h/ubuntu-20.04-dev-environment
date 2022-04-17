@@ -1,0 +1,2 @@
+# SSH Key Generation
+ssh-keygen -t ed25519 -C "hosainf1@gmail.com"
