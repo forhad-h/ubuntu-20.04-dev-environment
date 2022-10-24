@@ -23,9 +23,9 @@ php_value max_execution_time 300
 php_value max_input_time 300
 
 
-sudo chown -R root:www-data /var/www/html/wp_test &&\
-sudo  find /var/www/html/wp_test -type d -exec chmod 755 {} \; && \
-sudo  find /var/www/html/wp_test -type f -exec chmod 644 {} \; && \
-sudo  chown -Rf www-data.www-data /var/www/html/wp_test
+sudo chown -R root:www-data /var/www/html/wp-test &&\
+sudo  find /var/www/html/wp-test -type d -exec chmod 755 {} \; && \
+sudo  find /var/www/html/wp-test -type f -exec chmod 644 {} \; && \
+sudo  chown -Rf www-data.www-data /var/www/html/wp-test
 
 

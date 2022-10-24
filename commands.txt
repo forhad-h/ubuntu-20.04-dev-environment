@@ -75,6 +75,8 @@ xinput set-int-prop 14 "Device Enabled" 8 0
 xinput set-int-prop 14 "Device Enabled" 8 1
 
 # Update upwork time tracker manually
+ $ cd ~/.Upwork/Upwork/Updates/
+ 
  $ sudo dpkg -i update.deb
  $ sudo apt-get -f install
 
