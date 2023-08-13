@@ -21,6 +21,7 @@ Visual Code Studio - for JS development
   - Docker
   - Remote - Containers
   - Material Icon Theme
+  - GitLens
 
   # Fix Keyboard Shortcut:
     - Change Keybinding of "Add Selection To Next Find Match" `Ctrl + D` to `Ctrl + Alt + N`
