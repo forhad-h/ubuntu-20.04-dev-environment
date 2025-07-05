@@ -79,6 +79,9 @@ xinput set-int-prop 14 "Device Enabled" 8 1
  
  $ sudo dpkg -i update.deb
  $ sudo apt-get -f install
+ 
+Move the "Show Applications" icon to the left?
+gsettings set org.gnome.shell.extensions.dash-to-dock show-apps-at-top true
 
 
 

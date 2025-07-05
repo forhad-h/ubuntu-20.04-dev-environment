@@ -1,7 +1,7 @@
 
 # Hide username and hostname from terminal and show git branch
 
-$ gedit ~/.bashrc
+$ gnome-text-editor ~/.bashrc
 
 
 > Search for $color_prompt to modify

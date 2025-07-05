@@ -1,0 +1,7 @@
+MariaDB root user
+root
+11111111
+
+WP user
+wp
+11111111

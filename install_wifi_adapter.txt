@@ -1,3 +1,4 @@
+# WE DON'T NEED IT ANYMORE IN 24.04
 # Reference - https://dev.to/darkdebo/how-to-use-the-wifi-in-ubuntu-20-04-using-realtek-semiconductor-802-11n-53c0
 
 sudo apt-get install build-essential git dkms linux-headers-$(uname -r)

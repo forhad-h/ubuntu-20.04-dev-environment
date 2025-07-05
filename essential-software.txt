@@ -74,4 +74,5 @@ Docker
 Postman
 DBeaver
 Opera
+OBS Studio
 

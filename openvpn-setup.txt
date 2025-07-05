@@ -1,0 +1,117 @@
+Here’s a refined version of your guide on setting up an OpenVPN client on Ubuntu 24.04:
+
+---
+
+# Setting Up OpenVPN Client on Ubuntu 24.04
+
+If you're struggling to configure your OpenVPN client on Ubuntu 24.04, you're not alone. Many users have faced issues where the VPN connects to private resources but blocks access to public sites. This guide will walk you through a clear, step-by-step process to resolve this issue and set up a systemd service for managing your VPN connection seamlessly.
+
+## Issue Overview
+
+On Ubuntu 24.04, importing your OpenVPN configuration through Network Manager might block access to non-private resources. However, running the OpenVPN configuration directly from the terminal often works as expected. This guide will help you fix this issue and automate the VPN connection with a systemd service.
+
+## Steps to Resolve the Issue
+
+### 1. Modify Your OpenVPN Configuration
+
+To ensure that your VPN works correctly with both private and public resources, update your OpenVPN configuration file (`smyth-dev-forhad-vpn-client.ovpn`) by adding the following lines:
+
+```plaintext
+script-security 2
+up /etc/openvpn/update-resolv-conf
+down /etc/openvpn/update-resolv-conf
+```
+
+### 2. Create a Systemd Service for OpenVPN
+
+Automate your VPN connection process by creating a systemd service:
+
+#### Create and Edit the Service File
+
+Open a terminal and create a new systemd service file:
+
+```bash
+sudo nano /etc/systemd/system/smythos-vpn-dev.service
+```
+
+Add the following content:
+
+```ini
+[Unit]
+Description=OpenVPN connection to SmythOS Dev Servers
+After=network.target
+
+[Service]
+Type=simple
+ExecStart=/usr/sbin/openvpn --config /etc/openvpn/client/smythos-dev.ovpn
+Restart=on-failure
+
+[Install]
+WantedBy=multi-user.target
+```
+
+#### Place the Configuration File
+
+Move your OpenVPN configuration file to the appropriate directory:
+
+```bash
+sudo cp /path/to/your/smyth-dev-forhad-vpn-client.ovpn /etc/openvpn/smyth-dev-forhad-vpn-client.ovpn
+```
+
+### 3. Set Up Credentials
+
+To securely store your VPN username and password:
+
+#### Create the Credentials File
+
+```bash
+sudo nano /etc/openvpn/credentials
+```
+
+Add your username and password in this format:
+
+```plaintext
+username
+password
+```
+
+#### Set Permissions
+
+Protect your credentials file:
+
+```bash
+sudo chmod 600 /etc/openvpn/credentials
+```
+
+#### Update Configuration File
+
+Ensure your OpenVPN configuration file references the credentials file:
+
+```plaintext
+auth-user-pass /etc/openvpn/credentials
+```
+
+### 4. Reload Systemd and Start the Service
+
+To apply your changes and start the VPN service:
+
+```bash
+sudo systemctl daemon-reload
+sudo systemctl start smythos-vpn-dev.service
+```
+
+### 5. Enable the Service at Boot
+
+Ensure your VPN starts automatically at boot:
+
+```bash
+sudo systemctl enable smythos-vpn-dev.service
+```
+
+## Conclusion
+
+By following these steps, you should be able to resolve any issues with your OpenVPN client on Ubuntu 24.04 and efficiently manage your VPN connection with a systemd service. If you encounter any problems or have further questions, feel free to leave a comment below!
+
+---
+
+This version improves clarity, formatting, and flow, making the instructions easier to follow.

@@ -1,0 +1,2 @@
+- Focus Terminal when when click on 'Open in Terminal'
+- Make "/media/forhad/d3484d60-6363-4355-82d5-47203573683d1/All" accessible like "/home/All" as Ubuntu 20.04
