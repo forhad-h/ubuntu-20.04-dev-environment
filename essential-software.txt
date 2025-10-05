@@ -1,10 +1,8 @@
 Google Chrome
-  - Setup VPN
   - loom
-  - lastpass
-  - Wappalyzer
-  - Grammarly
+  - bitwarden
   
+Cursor
 Visual Code Studio - for JS development
   - Code Spell Checker
   - ENV
@@ -58,12 +56,10 @@ Atom - for PHP development
   - language-gitignore
 
   
-Skype
+Zoom
 Flameshot - screenshot
-Pick - color picker (pick-colour-picker)
 Anydesk
-Terminator
-NodeJS, NPM, nodemon, yarn
+NodeJS, NPM
 
 # NodeJS - Installation process
 
@@ -73,6 +69,5 @@ $ sudo apt-get install -y nodejs
 Docker
 Postman
 DBeaver
-Opera
 OBS Studio
 
