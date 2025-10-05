@@ -1,3 +1,4 @@
+Firefox
 Google Chrome
   - loom
   - bitwarden
@@ -32,30 +33,7 @@ Visual Code Studio - for JS development
   # Fix Keyboard Shortcut:
     - Change Keybinding of "Add Selection To Next Find Match" `Ctrl + D` to `Ctrl + Alt + N`
     - Then change Keybinding of "Copy Line Down" to `Ctrl + D`    
-    
-Atom - for PHP development
-  - Linter
-  - linter-php
-  - Atom Beautify
-  - Minimap
-  - Emmet
-  - File Icons
-  - autocomplete-wordpress-hooks
-  - wordpress-api
-  - sublime-block-comment
-  - ide-php
-  - php-debug
-    - atom-debug-ui
-    - atom-ide-ui
-  - highlight-selected
-    - Settings -> Light Theme
-  - jquery-snippets
-  - ide-html
-  - git-plus
-  - language-dotenv
-  - language-gitignore
 
-  
 Zoom
 Flameshot - screenshot
 Anydesk
@@ -70,4 +48,5 @@ Docker
 Postman
 DBeaver
 OBS Studio
+Upwork - time tracker
 
