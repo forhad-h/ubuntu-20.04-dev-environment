@@ -32,6 +32,7 @@ Visual Code Studio - for JS development
     - Then change Keybinding of "Copy Line Down" to `Ctrl + D`    
 
 Zoom
+Flameshot
 drawing
 Anydesk
 NVM
