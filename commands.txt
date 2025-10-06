@@ -30,16 +30,6 @@ gsettings set org.gnome.desktop.default-applications.terminal exec gnome-termina
 
 Go to Settings > Privacy > Connectivity -> Disable Connectivity Checking
 
-
-# Open URL from Skype into Google Chrome
-
-> Quit skype
-$ ln -s ~/.config/mimeapps.list ~/snap/skype/common/.config/mimeapps.list
-$ rm -rf ~/snap/skype/common/.config/google-chrome
-$ sudo ln -s ~/.config/google-chrome ~/snap/skype/common/.config/
-
-
-
 # Create Bookmark/Shortcut in Desktop
 $ ln -s $PWD ~/Desktop/
 

@@ -8,18 +8,15 @@ Visual Code Studio - for JS development
   - Code Spell Checker
   - ENV
   - ESLint
+  - GitLens — Git supercharged
+  - Better Comments
   - Prettier - Code formatter
     - Keyboard Shortcuts -> format document
     - file -> preference -> settings -> Default Formatter - Set to Prettier
     - file -> preference -> settings -> Prettier:Semi - Uncheck
     - file -> preference -> settings -> Search for `Word Wrap` and make `on`
     - file -> preference -> settings -> Search for 'Tab' and make `2`
-  - Better Comments
-  - GraphQL
-  - File icons
-  - Docker
-  - Remote - Containers
-  - Material Icon Theme
+  
   - PHP Intelephense
 
     > To recognise WordPress functions -Go to Settings > search for intelephense.environment.includePaths
@@ -35,15 +32,9 @@ Visual Code Studio - for JS development
     - Then change Keybinding of "Copy Line Down" to `Ctrl + D`    
 
 Zoom
-Flameshot - screenshot
+drawing
 Anydesk
-NodeJS, NPM
-
-# NodeJS - Installation process
-
-$ curl -fsSL https://deb.nodesource.com/setup_lts.x | sudo -E bash -
-$ sudo apt-get install -y nodejs
-
+NVM
 Docker
 Postman
 DBeaver
