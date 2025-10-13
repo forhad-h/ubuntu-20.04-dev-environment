@@ -38,7 +38,13 @@ Anydesk
 NVM
 Docker
 Postman
+
 DBeaver
+After installing with snap, need to apply a fix to prevent a couple of errors:
+Edit the file: sudo nano /var/lib/snapd/desktop/applications/dbeaver-ce_dbeaver-ce.desktop
+Find the line starting with: Exec=env BAMF_DESKTOP_FILE_HINT=...
+Replace it entirely with: Exec=env BAMF_DESKTOP_FILE_HINT=/var/lib/snapd/desktop/applications/dbeaver-ce_dbeaver-ce.desktop NO_AT_BRIDGE=1 /snap/bin/dbeaver-ce
+
 OBS Studio
 Upwork - time tracker
 

@@ -1,0 +1,23 @@
+# Disable unnecessary noisy services
+sudo systemctl disable --now sssd
+sudo systemctl disable --now sssd-autofs.socket sssd-nss.socket sssd-pac.socket sssd-pam.socket sssd-sudo.socket sssd-ssh.socket
+
+# Reduce logging level for rsyslog and journald
+sudo nano /etc/systemd/journald.conf
+
+SystemMaxUse=500M # SystemMaxUse=
+RuntimeMaxUse=200M # RuntimeMaxUse=
+
+sudo systemctl restart systemd-journald
+
+sudo nano /etc/logrotate.d/rsyslog
+rotate 5 # rotate 4
+daily # weekly
+compress
+notifempty
+maxsize 100M # Not there
+
+sudo logrotate -f /etc/logrotate.d/rsyslog
+
+
+
