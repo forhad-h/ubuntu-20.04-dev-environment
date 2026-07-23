@@ -1,0 +1,6 @@
+[Unit]
+Description=Sync Obsidian Vault with iCloud Drive via rclone bisync
+
+[Service]
+Type=oneshot
+ExecStart=%h/.local/bin/obsidian-icloud-sync.sh

@@ -6,6 +6,7 @@ Google Chrome
 Cursor
 Visual Code Studio - for JS development
   - Code Spell Checker
+  - vitest
   - ENV
   - ESLint
   - GitLens — Git supercharged
@@ -48,3 +49,10 @@ Replace it entirely with: Exec=env BAMF_DESKTOP_FILE_HINT=/var/lib/snapd/desktop
 OBS Studio
 Upwork - time tracker
 
+Install EasyEffects from Flatpak to reduce noise for microphone
+sudo apt install flatpak
+flatpak remote-add --if-not-exists flathub https://flathub.org/repo/flathub.flatpakrepo
+
+flatpak install flathub com.github.wwmm.easyeffects
+
+flatpak run com.github.wwmm.easyeffects
