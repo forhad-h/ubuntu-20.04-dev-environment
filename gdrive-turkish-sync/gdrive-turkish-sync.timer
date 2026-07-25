@@ -1,0 +1,10 @@
+[Unit]
+Description=Run Learning Turkish Google Drive sync periodically
+
+[Timer]
+OnBootSec=2min
+OnUnitActiveSec=5min
+Persistent=true
+
+[Install]
+WantedBy=timers.target

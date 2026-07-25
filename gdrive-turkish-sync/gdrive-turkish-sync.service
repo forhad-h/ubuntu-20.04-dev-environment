@@ -1,0 +1,6 @@
+[Unit]
+Description=Sync "Learning Turkish" with Google Drive via rclone (Docs<->md)
+
+[Service]
+Type=oneshot
+ExecStart=%h/.local/bin/gdrive-turkish-sync.sh

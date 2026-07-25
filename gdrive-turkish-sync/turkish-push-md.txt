@@ -1,0 +1,9 @@
+# Pass 3: markdown only. Combined with --ignore-existing, this uploads
+# just the notes that have no counterpart on Drive yet, converting each
+# into a native Google Doc.
+# .obsidian/ is excluded first: some plugins keep .md files in there
+# (templates, README shipped with a plugin) and those are not notes.
+- .obsidian/**
+- .trash/**
++ *.md
+- *

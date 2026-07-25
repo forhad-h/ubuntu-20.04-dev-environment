@@ -1,0 +1,20 @@
+# Pass 2: what may be pushed local -> Drive as a plain file.
+# Explicit allow-list. Notably absent:
+#   *.md            handled by pass 3 (converts to a Google Doc)
+#   *.xlsx, *.pptx  these are pass-1 exports of Sheets/Slides; pushing one
+#                   back would shadow the native file it came from.
+# Obsidian's own state stays local — this is a standalone vault, so
+# .obsidian/ lives inside it and has no business on Drive.
+- .obsidian/**
+- .trash/**
++ *.pdf
++ *.png
++ *.jpg
++ *.jpeg
++ *.gif
++ *.webp
++ *.mp3
++ *.m4a
++ *.wav
++ *.ogg
+- *
