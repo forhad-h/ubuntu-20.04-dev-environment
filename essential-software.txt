@@ -56,3 +56,8 @@ flatpak remote-add --if-not-exists flathub https://flathub.org/repo/flathub.flat
 flatpak install flathub com.github.wwmm.easyeffects
 
 flatpak run com.github.wwmm.easyeffects
+
+puku
+warp
+obsidian with iCloud sync
+PulseAudio Volume Control
