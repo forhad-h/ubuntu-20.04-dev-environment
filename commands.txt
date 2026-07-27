@@ -73,7 +73,8 @@ xinput set-int-prop 14 "Device Enabled" 8 1
 Move the "Show Applications" icon to the left?
 gsettings set org.gnome.shell.extensions.dash-to-dock show-apps-at-top true
 
-
+Align Dock icons in center
+gsettings set org.gnome.shell.extensions.dash-to-dock extend-height false
 
 
 

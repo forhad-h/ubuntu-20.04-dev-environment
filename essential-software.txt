@@ -57,7 +57,9 @@ flatpak install flathub com.github.wwmm.easyeffects
 
 flatpak run com.github.wwmm.easyeffects
 
+Git
+Node.js
 puku
 warp
 obsidian with iCloud sync
-PulseAudio Volume Control
+NoiseTorch
