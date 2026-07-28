@@ -1,4 +1,14 @@
-# Syncing an Obsidian Vault with iCloud Drive from Ubuntu 24.04
+# Syncing an Obsidian Vault with iCloud Drive from Linux
+
+> **Supported OS:** most modern Linux distributions. This setup uses
+> `rclone` (with the `iclouddrive` backend), `systemd` user units, and
+> a few common CLI tools (`flock`, `notify-send`) — none of which are
+> Ubuntu-specific. The only Ubuntu-specific assumptions are `apt` for
+> the rclone install in Step 1 (substitute your distro's package
+> manager) and `loginctl` for lingering (already a systemd component).
+> **Tested on Ubuntu 24.04 LTS and Ubuntu 26.04.**
+
+![Architecture diagram](architecture-diagram.gif)
 
 ## Why
 
@@ -31,8 +41,8 @@ end up in sync through iCloud, touching only the Linux side.
   for this unofficial API surface. 2 minutes was chosen empirically —
   each no-op sync takes ~3-5s, so this leaves plenty of idle headroom —
   but if `sync.log` starts showing auth/throttling failures, the fix is
-  to widen `OnUnitActiveSec` in the timer (back up to 5 min or more).
-  There's no hard evidence 2 min is "safe," just no observed problems.
+  to widen `OnUnitActiveSec` in the timer. There's no hard evidence
+  2 min is "safe," just no observed problems.
 - **Shared `.obsidian/` settings.** Only `workspace.json` /
   `workspace-mobile.json` (per-device window/pane layout) are excluded
   from sync. Other `.obsidian/*.json` (theme, enabled plugins, etc.) DO
@@ -49,30 +59,44 @@ end up in sync through iCloud, touching only the Linux side.
 
 ## Prerequisites
 
-- Ubuntu 24.04, vault expected at `~/Documents/Obsidian Vault`
+- A modern Linux distribution with `systemd` (tested on Ubuntu 24.04
+  LTS and Ubuntu 26.04), vault expected at `~/Documents/Obsidian Vault`
 - Your Apple ID email + password (not an app-specific password) and
   access to 2FA (trusted device or phone number)
 - `notify-send` and `flock` (both ship by default on Ubuntu desktop)
 
 ## Files in this directory
 
-Alongside this README are the actual deployed files (not just the
-copies inlined below), plus `install.sh` which copies them into place
-and enables the timer in one shot:
+In this same folder you'll find the actual setup files (the real,
+ready-to-use versions — not just the code blocks shown further down
+in this README), plus a helper script called `install.sh` that drops
+them where they need to go and turns the timer on for you:
 
 ```bash
 ./install.sh
 ```
 
-Run `install.sh` only after completing steps 1-3 and 5 below (rclone
-installed, remote configured, vault path confirmed, baseline resync
-done) — it deploys the script/timer but doesn't do the interactive
-Apple ID login or the first resync for you.
+That one command installs everything in a single shot.
+
+> [!WARNING]
+> **Don't run `install.sh` yet — finish steps 1–3 and 5 first.**
+>
+> Before running `install.sh`, you need to do these by hand:
+>
+> 1. **Step 1** — install rclone (Ubuntu's built-in version is too old)
+> 2. **Step 2** — log into your Apple ID and finish the 2FA prompt
+> 3. **Step 3** — confirm the exact vault path on iCloud
+> 5. **Step 5** — do the first `bisync --resync` to establish a baseline
+>
+> `install.sh` only copies the files into place and turns the timer
+> on. It will **not** type your password, do the 2FA prompt, or run
+> the initial sync for you. If you skip those steps, the timer will
+> just keep failing every 2 minutes.
 
 ## Step 1 — Install rclone (latest, not the apt package)
 
-Ubuntu 24.04's `apt` rclone is too old to include the `iclouddrive`
-backend. Use the official installer:
+The `apt` rclone shipped with Ubuntu (24.04 LTS and 26.04) is too old
+to include the `iclouddrive` backend. Use the official installer:
 
 ```bash
 curl https://rclone.org/install.sh | sudo bash
@@ -209,9 +233,8 @@ Persistent=true
 WantedBy=timers.target
 ```
 
-(Started at 5 min intervals, later tightened to 2 min after confirming
-each no-op run only takes a few seconds — see Tradeoffs above on how
-to widen this back up if failures appear.)
+(2 min interval — see Tradeoffs above on how to widen this if failures
+appear; each no-op run only takes a few seconds.)
 
 Enable:
 
