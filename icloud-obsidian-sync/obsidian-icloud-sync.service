@@ -4,3 +4,7 @@ Description=Sync Obsidian Vault with iCloud Drive via rclone bisync
 [Service]
 Type=oneshot
 ExecStart=%h/.local/bin/obsidian-icloud-sync.sh
+# Type=oneshot has no start timeout by default, so a run that wedged on DNS was
+# free to outlive several timer intervals. Generous on purpose: killing a real
+# transfer mid-flight is worse than a rare long run.
+TimeoutStartSec=300
